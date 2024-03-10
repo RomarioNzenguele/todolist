@@ -1,9 +1,11 @@
 package com.nzenguele.todolist.controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -39,9 +41,12 @@ public class TaskController {
     }
 
     @GetMapping("/{id}")
-    @ResponseStatus(HttpStatus.OK)
-    Task getOne(@PathVariable Long id) {
-        return this.taskService.findById(id);
+    ResponseEntity<Task> getOne(@PathVariable Long id) {
+        Optional<Task> task = this.taskService.findById(id);
+        if (task.isPresent()) {
+            return ResponseEntity.ok().body(task.get());
+        }
+        return ResponseEntity.notFound().build();
     }
 
     // Update

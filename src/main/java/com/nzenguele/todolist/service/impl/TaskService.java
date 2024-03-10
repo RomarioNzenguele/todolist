@@ -1,6 +1,7 @@
 package com.nzenguele.todolist.service.impl;
 
 import java.util.List;
+import java.util.Optional;
 
 import com.nzenguele.todolist.service.ITaskService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,8 +31,8 @@ public class TaskService implements ITaskService {
         return taskRepository.findAll(sort);
     }
     @Override
-    public Task findById(Long id) {
-        return taskRepository.findById(id).get();
+    public Optional<Task> findById(Long id) {
+        return taskRepository.findById(id);
     }
 
     // D - Delete
