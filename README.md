@@ -8,7 +8,7 @@ Esta simples API  permite gerenciar uma lista de tarefas, realizando operações
     - Spring Boot
     - Spring Data JPA
     - SpringDoc OpenAPI 3
-- Mysql
+- H2
 - Maven
 - Lombok
 
@@ -36,7 +36,7 @@ Esta simples API  permite gerenciar uma lista de tarefas, realizando operações
 - Clone o repositório: git clone https://github.com/seu-usuario/nome-do-repositorio.git
 - Instale as dependências: npm install
 - Execute a aplicação: npm start
-> Obs: Alterar o ficheiro application.properties
+> Obs: Alterar o ficheiro application.properties para configurar a tua própria database (mysql, postgree, ...)
 ## Contribuição
 Sinta-se à vontade para contribuir com melhorias abrindo um problema ou enviando um pull request.
 
@@ -55,7 +55,7 @@ This Rest API allow the managment of a task list, doing complete CRUD operaction
     - Spring Boot
     - Spring Data JPA
     - SpringDoc OpenAPI 3
-- Mysql
+- H2
 - Maven
 - Lombok
 
@@ -83,7 +83,7 @@ This Rest API allow the managment of a task list, doing complete CRUD operaction
 - Clone the repository: git clone https://github.com/seu-usuario/nome-do-repositorio.git
 - Install dependencies: npm install
 - Run the application: npm start
-> Note: Change the application.properties file
+> Note: Change the application.properties file to configure your own database (mysql, postgree, ...)
 ## Contribution
 Feel free to contribute improvements by opening an issue or submitting a pull request.
 

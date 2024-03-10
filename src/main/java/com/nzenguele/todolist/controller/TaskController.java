@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.nzenguele.todolist.domain.Task;
-import com.nzenguele.todolist.service.TaskService;
+import com.nzenguele.todolist.service.impl.TaskService;
 
 @RestController
 @RequestMapping("/tasks")
